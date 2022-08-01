@@ -15,13 +15,13 @@ pipeline {
         }
         stage('Login Docker Registry') {
             steps {
-				sh 'echo 123456aA@ | docker login -u npower1109l --password-stdin'
-			}
+		sh 'echo 123456aA@ | docker login -u npower1109l --password-stdin'
+	    }
         }
         stage('Push Docker Image') {
             steps {
-				sh 'docker push npower1109l/nodeapp_test:latest'
-			}
+		sh 'docker push npower1109l/nodeapp_test:latest'
+	    }
         }
     }
 }
