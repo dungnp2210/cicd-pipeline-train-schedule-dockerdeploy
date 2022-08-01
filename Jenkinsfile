@@ -10,11 +10,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                script {
-                    app = docker.build("npower1109l/train-schedule")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
-                    }
+               sh 'docker build -t npower1109l/nodeapp_test:latest .'
                 }
             }
         }
