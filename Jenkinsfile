@@ -11,7 +11,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                sh 'docker build -t npower1109l/nodeapp_test:latest .'
-                }
             }
         }
     }
