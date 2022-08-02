@@ -16,7 +16,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-		sh 'docker push npower1109l/nodeapp_test'
+		sh 'docker login && docker push npower1109l/nodeapp_test'
 	    }
         }
     }
