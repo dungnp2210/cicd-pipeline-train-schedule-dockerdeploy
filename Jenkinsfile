@@ -16,7 +16,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-		sh 'docker login && docker push npower1109l/nodeapp_test'
+		sh 'docker login --username=npower1109l --password=123456aA@ && docker push npower1109l/nodeapp_test'
 	    }
         }
     }
